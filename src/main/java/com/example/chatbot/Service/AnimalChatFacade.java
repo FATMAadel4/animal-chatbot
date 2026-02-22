@@ -22,7 +22,7 @@ public class AnimalChatFacade {
 
         if (image != null && !image.isEmpty()) {
 
-            // ✅ حدد اللغة من السؤال
+            // حدد اللغة من السؤال
             boolean isArabic = false;
             String language = "English";
             if (question != null && !question.isBlank()) {
@@ -36,7 +36,7 @@ public class AnimalChatFacade {
             if (question != null && !question.isBlank()) {
                 String ragAnswer = ragService.askWithContext(analysis.animalName(), question);
 
-                // ✅ الـ labels حسب اللغة
+                //  الـ labels حسب اللغة
                 if (isArabic) {
                     return "🔍 تحليل الصورة:\n" + analysis.description() +
                             "\n\nإجابة سؤالك:\n" + ragAnswer;
@@ -46,13 +46,13 @@ public class AnimalChatFacade {
                 }
             }
 
-            // ✅ صورة بس بدون سؤال - default انجليزي
+            //  صورة بس بدون سؤال - default انجليزي
             String ragInfo = ragService.askAboutAnimal(analysis.animalName(), null);
             return "🔍 Image Analysis:\n" + analysis.description() +
                     "\n\nAbout " + analysis.animalName() + ":\n" + ragInfo;
         }
 
-        // ✅ نص فقط
+        //  نص فقط
         if (question != null && !question.isBlank()) {
             String animal = textService.extractAnimal(question);
             return ragService.askAboutAnimal(animal, question);

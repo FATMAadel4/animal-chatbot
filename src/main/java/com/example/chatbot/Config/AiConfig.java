@@ -25,7 +25,7 @@ public class AiConfig {
                 .apiKey(apikey)
                 .modelName("gpt-4o-mini")
                 .temperature(0.2)
-                .maxTokens(300)  // ✅ زودناها عشان الوصف أطول
+                .maxTokens(300)
                 .build();
     }
 
@@ -43,7 +43,7 @@ public class AiConfig {
                 .baseUrl("http://localhost:8000")
                 .collectionName("animals-db")
                 .timeout(java.time.Duration.ofSeconds(60))
-                .logRequests(true)   // ✅ أضف السطرين دول
+                .logRequests(true)
                 .logResponses(true)
                 .build();
     }

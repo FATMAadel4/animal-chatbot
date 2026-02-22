@@ -18,7 +18,7 @@ public class VisionService {
 
     public record AnimalAnalysis(String animalName, String description) {}
 
-    // ✅ بيستقبل اللغة دلوقتي
+    //  بيستقبل اللغة دلوقتي
     public AnimalAnalysis analyzeAnimal(byte[] imageBytes, String language) {
 
         String base64 = Base64.getEncoder().encodeToString(imageBytes);
