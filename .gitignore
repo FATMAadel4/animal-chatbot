@@ -31,8 +31,13 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Sensitive Files ###
 .env
-application.ymal
+application.yml
+application.yaml
+application.properties
+
+### Build ###
 target/
 *.class
-application.yaml
