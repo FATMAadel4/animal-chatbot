@@ -34,9 +34,7 @@ build/
 
 ### Sensitive Files ###
 .env
-application.yml
-application.yaml
-application.properties
+
 
 ### Build ###
 target/
