@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8080}   # Render هيديك البورت تلقائي
+  port: ${PORT:8080}
 
 spring:
   servlet:
@@ -8,4 +8,7 @@ spring:
       max-request-size: 10MB
 
 openai:
-  api-key: ${OPENAI_API_KEY}   # مش هنحط المفتاح هنا
+  api-key: ${OPENAI_API_KEY}
+
+chroma:
+  url: ${CHROMA_URL:http://localhost:8000}
