@@ -10,5 +10,3 @@ spring:
 openai:
   api-key: ${OPENAI_API_KEY}
 
-chroma:
-  url: ${CHROMA_URL:http://localhost:8000}

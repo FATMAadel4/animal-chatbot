@@ -38,9 +38,9 @@ public class AiConfig {
     }
 
     @Bean
-    public EmbeddingStore<TextSegment> embeddingStore(@Value("${chroma.url}") String chromaUrl) {
+    public EmbeddingStore<TextSegment> embeddingStore() {
         return ChromaEmbeddingStore.builder()
-                .baseUrl(chromaUrl)
+                .baseUrl("http://localhost:8000")
                 .collectionName("animals-db")
                 .timeout(java.time.Duration.ofSeconds(60))
                 .logRequests(true)
